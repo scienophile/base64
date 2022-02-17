@@ -1,0 +1,24 @@
+{% extends "bin2text/_base.html" %}
+{% block content %}
+<div class="container">
+  <article>
+    <h3>Base64 Encode and Decode</h3>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="input">Simply enter your data then push the button.</label>
+      <textarea id="input" name="input" placeholder="Type (or paste) here"></textarea>
+      <label for="charset">Charset</label>
+      <select id="charset" name="charset" required>
+        <option value="" selected="selected">Select a charset...</option>
+        <option value="utf-8">UTF-8</option>
+        <option value="ascii">ASCII</option>
+      </select>
+      <div class="grid">
+        <div><input type="submit" name="encode" value="Encode"></div>
+        <div><input type="submit" name="decode" value="Decode"></div>
+      </div>
+      <textarea name="output" readonly placeholder="Result goes here">{{ output }}</textarea>
+    </form>
+  </article>
+</div>
+{% endblock %}

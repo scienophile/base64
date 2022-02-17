@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+<link rel="stylesheet" href="{% static 'bin2text/style.css' %}">
+<title>Base64</title>
+<nav class="container-fluid">
+  <ul>
+    <li><a href="{% url 'index' %}">Base64</a></li>
+  </ul>
+</nav>
+{% block content %}
+{% endblock content %}
