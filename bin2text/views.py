@@ -17,6 +17,5 @@ def index(request):
                 encoded_text = text.encode(charset)
                 output_text = base64.b64encode(encoded_text)
                 context['output'] = output_text.decode(charset)
-
+        
     return render(request, 'bin2text/index.html', context)
-
